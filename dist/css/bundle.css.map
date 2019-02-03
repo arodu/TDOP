@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack:///./src/styles/index.scss"],"names":[],"mappings":"AAAA,KAAK","file":"css/bundle.css?h=39905737efeb063856f5","sourcesContent":["body{color:blue}\n"],"sourceRoot":""}
+{"version":3,"sources":["webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///webpack:///./src/styles/index.scss"],"names":[],"mappings":"AAAA;AACA;AACA","file":"css/bundle.css?h=734e295b3070958d8a5a","sourcesContent":["body {\n  color: blue;\n}\n"],"sourceRoot":""}
