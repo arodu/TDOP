@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>webpack Starter kit</title>
-<link href="dist/css/bundle.css?h=5a7552a87f0583f7131f" rel="stylesheet"></head>
+  <title>TDOP</title>
+<link href="dist/css/bundle.css?h=8849f8504cf0114150b2" rel="stylesheet"></head>
 <body>
   
   <div class="main">
@@ -12,9 +12,26 @@
       <button class="run">Run</button>
       <textarea name="" id="" cols="30" rows="10"></textarea>
     </section>
-    <section class="console"></section>
+    <section class="console">weweweweweewwed
+wed
+wed
+we
+dwe
+d
+
+    </section>
   </main>
-<script type="text/javascript" src="dist/js/bundle.js?h=5a7552a87f0583f7131f"></script></body>
+<script type="text/javascript" src="dist/js/bundle.js?h=8849f8504cf0114150b2"></script></body>
 </html>
 
+
+<script>
+  let run = document.querySelector('.run');
+  run.onclick = function(){
+    let ta = document.querySelector('.editor textarea')
+    let console = document.querySelector('.console')
+    console.innerHTML = ta.value
+  }
+
+</script>
 

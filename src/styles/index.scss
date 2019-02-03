@@ -13,6 +13,8 @@
     section{
       width: 100%;
       min-height: 50vh;
+
+      font-size: 1rem;
     }
 
     @media (min-width: 768px) {
@@ -42,10 +44,15 @@
       background: transparent;
       border: 0;
       resize: none;
+      font-size: 1rem;
     }
   }
 
   .console{
     color: #f8f9fa;
     background-color: #343a40;
+
+    white-space: pre;
+
+    overflow: scroll;
   }
