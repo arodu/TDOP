@@ -1,58 +1,108 @@
+$line-height: 1.2rem;
+$font-size: 1rem;
+$dark: #333;
+$light: #ddd;
+$font-family: "Courier New", Courier, monospace;
 
-  body{
-    margin: 0;
+body{
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+.main{
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+
+  section{
+    width: 50%;
+    padding: .5rem;
+    box-sizing: border-box;
   }
 
-  .main{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    height: 100%;
-
-    section{
-      width: 100%;
-      min-height: 50vh;
-
-      font-size: 1rem;
-    }
-
-    @media (min-width: 768px) {
-      flex-direction: row;
-
-      section{
-        width: 50%;
-        height: 100vh;
-      }
-    }
-  }
- 
   .editor{
-    color: #343a40;
-    background-color: #f8f9fa;
+    background-color: $light;
+    color: $dark;
     position: relative;
 
-    .run{
-      position: absolute;
-      top:10px;
-      right: 10px;
+    #input{
+      border: 0;
+      background-color: transparent;
+      //background: rgba(0,0,0,.1);
+      font-size: $font-size;
+      font-family: $font-family;
+      resize: none;
+      width: 100%;
+      min-height: 5em;
+      line-height: $line-height;
     }
 
-    textarea{
-      width: 99%;
-      height: 100%;
-      background: transparent;
-      border: 0;
-      resize: none;
-      font-size: 1rem;
-    }
   }
 
   .console{
-    color: #f8f9fa;
-    background-color: #343a40;
+    background-color: $dark;
+    color: $light;
 
-    white-space: pre;
-
-    overflow: scroll;
+    #output{
+      background-color: transparent;
+      //background: rgba(255,255,255,.1);
+      font-size: $font-size;
+      font-family: $font-family;
+      width: 100%;
+      border: 0;
+      white-space: pre;
+      line-height: $line-height;
+    }
   }
+
+}
+
+
+.btn-run{
+      position: fixed;
+      bottom: 1.5rem;
+      right: 2rem;
+
+      background-color: $light;
+      color: $dark;
+      border: 1px solid $dark;
+      padding: .4rem .8rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.2rem;
+      border-radius: 16px;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover{
+        background-color: $dark;
+        color: $light;
+        border-color: $light;
+      }
+      &:active{
+        background-color: $light;
+        color: $dark;
+        border-color: $dark;
+      }
+
+    }
+
+@media (max-width: 575.98px) {
+  .main{
+    flex-direction: column;
+    section{
+      width: 100%;
+      min-height: 50vh;
+    }
+  }
+
+  .btn-run{
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+}
+
+

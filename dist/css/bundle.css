@@ -1,58 +1,95 @@
 body {
   margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .main {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .main section {
-  width: 100%;
-  min-height: 50vh;
-  font-size: 1rem;
+  width: 50%;
+  padding: .5rem;
+  box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  .main {
-    flex-direction: row;
-  }
-  .main section {
-    width: 50%;
-    height: 100vh;
-  }
-}
-
-.editor {
-  color: #343a40;
-  background-color: #f8f9fa;
+.main .editor {
+  background-color: #ddd;
+  color: #333;
   position: relative;
 }
 
-.editor .run {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.editor textarea {
-  width: 99%;
-  height: 100%;
-  background: transparent;
+.main .editor #input {
   border: 0;
-  resize: none;
+  background-color: transparent;
   font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  resize: none;
+  width: 100%;
+  min-height: 5em;
+  line-height: 1.2rem;
 }
 
-.console {
-  color: #f8f9fa;
-  background-color: #343a40;
+.main .console {
+  background-color: #333;
+  color: #ddd;
+}
+
+.main .console #output {
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+  border: 0;
   white-space: pre;
-  overflow: scroll;
+  line-height: 1.2rem;
+}
+
+.btn-run {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  background-color: #ddd;
+  color: #333;
+  border: 1px solid #333;
+  padding: .4rem .8rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-run:hover {
+  background-color: #333;
+  color: #ddd;
+  border-color: #ddd;
+}
+
+.btn-run:active {
+  background-color: #ddd;
+  color: #333;
+  border-color: #333;
+}
+
+@media (max-width: 575.98px) {
+  .main {
+    flex-direction: column;
+  }
+  .main section {
+    width: 100%;
+    min-height: 50vh;
+  }
+  .btn-run {
+    bottom: 1rem;
+    right: 1rem;
+  }
 }
 
 
-/*# sourceMappingURL=bundle.css.map?h=8849f8504cf0114150b2*/
+/*# sourceMappingURL=bundle.css.map?h=4192abace8afbef1a1c4*/
