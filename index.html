@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TDOP</title>
-<link href="dist/css/bundle.css?h=4192abace8afbef1a1c4" rel="stylesheet"></head>
+<link href="dist/css/bundle.css?h=2e2ac056cec1ca29a73c" rel="stylesheet"></head>
 <body>
   
   <div class="main">
@@ -18,12 +18,12 @@ var c = a+b;</textarea>
     </section>
   </main>
 
-  <button id="btn-run" class="btn-run">Parse</button>
+  <button id="btn-run" class="btn-run" title="Ctrl + Enter">Parse</button>
 
 <script src="public/tokens.js"></script>
 <script src="public/parse.js"></script>
 
-<script type="text/javascript" src="dist/js/bundle.js?h=4192abace8afbef1a1c4"></script></body>
+<script type="text/javascript" src="dist/js/bundle.js?h=2e2ac056cec1ca29a73c"></script></body>
 </html>
 
 <script>
@@ -39,6 +39,13 @@ var c = a+b;</textarea>
   editor.onclick = function(){
     input.focus()
   }
+
+
+
+
+
+
+
 </script>
 
 
@@ -114,6 +121,16 @@ Object.prototype.error = function (message, t) {
     document.getElementById('btn-run').onclick = function (e) {
         go(document.getElementById('input').value);
     };
+
+    input.onkeydown = function(o) {
+      o = o || event;
+      if (o.ctrlKey && o.keyCode == 13) {
+        console.log("Ctrl+Enter");
+        go(document.getElementById('input').value);
+        o.preventDefault();  
+      }
+    }
+
 }());
 
 </script>

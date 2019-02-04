@@ -98,8 +98,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/index.scss */ "./src/styles/index.scss");
 /* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_index_scss__WEBPACK_IMPORTED_MODULE_0__);
-
-console.log('webpack starterkit');
+ //console.log('webpack starterkit');
 
 /***/ }),
 
@@ -123,10 +122,10 @@ console.log('webpack starterkit');
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/TDOP/src/scripts/index */"./src/scripts/index.js");
+module.exports = __webpack_require__(/*! /var/www/html/tdop/src/scripts/index */"./src/scripts/index.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?h=4192abace8afbef1a1c4
+//# sourceMappingURL=bundle.js.map?h=2e2ac056cec1ca29a73c
