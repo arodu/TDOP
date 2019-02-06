@@ -1,32 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TDOP</title>
-<link href="dist/css/bundle.css?h=ae0c9d9f69c358c5136e" rel="stylesheet"></head>
-<body>
-  
-  <div class="main">
-    <section class="editor">
-      <textarea name="" id="input">var a = 1;
-var b = 3;
-var c = a+b;</textarea>
-    </section>
-    <section class="console">
-      <div id="output"></div>
-    </section>
-  </main>
-
-  <button id="btn-run" class="btn-run" title="Ctrl + Enter">Parse</button>
-
-<script src="public/tokens.js"></script>
-<script src="public/parse.js"></script>
-
-<script type="text/javascript" src="dist/js/bundle.js?h=ae0c9d9f69c358c5136e"></script></body>
-</html>
-
-<script>
   let run = document.querySelector('.btn-run');
   let editor = document.querySelector('.editor');
   let input = editor.querySelector('#input')
@@ -40,11 +11,9 @@ var c = a+b;</textarea>
     input.focus()
   }
 
-</script>
+  // *****************************
 
-
-<script type="text/javascript">
-      var autoExpand = function (field) {
+        var autoExpand = function (field) {
   // Reset field height
   field.style.height = 'inherit';
   // Get the computed styles for the element
@@ -61,9 +30,9 @@ document.addEventListener('input', function (event) {
   if (event.target.tagName.toLowerCase() !== 'textarea') return;
   autoExpand(event.target);
 }, false);
-</script>
 
-<script>
+  // *****************************
+
 /*jslint evil: true */
 
 /*members create, error, message, name, prototype, stringify, toSource,
@@ -126,5 +95,3 @@ Object.prototype.error = function (message, t) {
     }
 
 }());
-
-</script>

@@ -7,7 +7,7 @@
 
 //jslint for, this
 
-var make_parse = function () {
+export var make_parse = function () {
     var scope;
     var symbol_table = {};
     var token;

@@ -36,7 +36,7 @@ String.prototype.tokens = function (prefix, suffix) {
 
     var make = function (type, value) {
 
-// Make a token object.
+    // Make a token object.
 
         return {
             type: type,
@@ -46,13 +46,13 @@ String.prototype.tokens = function (prefix, suffix) {
         };
     };
 
-// Begin tokenization. If the source string is empty, return nothing.
+    // Begin tokenization. If the source string is empty, return nothing.
 
     if (!this) {
         return;
     }
 
-// If prefix and suffix strings are not provided, supply defaults.
+    // If prefix and suffix strings are not provided, supply defaults.
 
     if (typeof prefix !== 'string') {
         prefix = '<>+-&';
@@ -62,19 +62,19 @@ String.prototype.tokens = function (prefix, suffix) {
     }
 
 
-// Loop through this text, one character at a time.
+    // Loop through this text, one character at a time.
 
     c = this.charAt(i);
     while (c) {
         from = i;
 
-// Ignore whitespace.
+    // Ignore whitespace.
 
         if (c <= ' ') {
             i += 1;
             c = this.charAt(i);
 
-// name.
+    // name.
 
         } else if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
             str = c;
@@ -91,16 +91,16 @@ String.prototype.tokens = function (prefix, suffix) {
             }
             result.push(make('name', str));
 
-// number.
+    // number.
 
-// A number cannot start with a decimal point. It must start with a digit,
-// possibly '0'.
+    // A number cannot start with a decimal point. It must start with a digit,
+    // possibly '0'.
 
         } else if (c >= '0' && c <= '9') {
             str = c;
             i += 1;
 
-// Look for more digits.
+    // Look for more digits.
 
             while (true) {
                 c = this.charAt(i);
@@ -111,7 +111,7 @@ String.prototype.tokens = function (prefix, suffix) {
                 str += c;
             }
 
-// Look for a decimal fraction part.
+    // Look for a decimal fraction part.
 
             if (c === '.') {
                 i += 1;
@@ -126,7 +126,7 @@ String.prototype.tokens = function (prefix, suffix) {
                 }
             }
 
-// Look for an exponent part.
+    // Look for an exponent part.
 
             if (c === 'e' || c === 'E') {
                 i += 1;
@@ -147,7 +147,7 @@ String.prototype.tokens = function (prefix, suffix) {
                 } while (c >= '0' && c <= '9');
             }
 
-// Make sure the next character is not a letter.
+    // Make sure the next character is not a letter.
 
             if (c >= 'a' && c <= 'z') {
                 str += c;
@@ -155,8 +155,8 @@ String.prototype.tokens = function (prefix, suffix) {
                 make('number', str).error("Bad number");
             }
 
-// Convert the string value to a number. If it is finite, then it is a good
-// token.
+    // Convert the string value to a number. If it is finite, then it is a good
+    // token.
 
             n = +str;
             if (isFinite(n)) {
