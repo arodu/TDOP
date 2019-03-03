@@ -1,4 +1,4 @@
-# Analizador lexico
+# Analizador Léxico
 
 
 
