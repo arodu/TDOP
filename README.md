@@ -1,7 +1,15 @@
 # Analizador Léxico
 
+## Requerimientos para Desarrollo
+```bash
+sudo npm install -g webpack webpack-cli sass
+```
 
+## Instalación para Desarrollo
+```bash
+npm install
+```
 
-## Credits
+## Creditos
 
-Based on [Top Down Operator Precedence](https://github.com/douglascrockford/TDOP) by [Douglas Crockford](mailto:douglas@crockford.com)
+Basado en [Top Down Operator Precedence](https://github.com/douglascrockford/TDOP) de [Douglas Crockford](mailto:douglas@crockford.com)
