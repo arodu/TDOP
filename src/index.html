@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TDOP</title>
+  <title>Analizador Léxico</title>
 </head>
 <body>
-  
+
   <div class="main">
     <section class="editor">
       <textarea name="" id="input">var a = 1;
@@ -32,7 +32,7 @@ var c = a+b;</textarea>
   let input = editor.querySelector('#input')
   let output = document.querySelector('.console #output')
 
-  /*run.onclick = function(){  
+  /*run.onclick = function(){
     output.innerHTML = input.value
   }*/
 
@@ -121,7 +121,7 @@ Object.prototype.error = function (message, t) {
       if (o.ctrlKey && o.keyCode == 13) {
         console.log("Ctrl+Enter");
         go(document.getElementById('input').value);
-        o.preventDefault();  
+        o.preventDefault();
       }
     }
 
